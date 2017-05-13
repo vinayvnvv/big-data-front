@@ -1,0 +1,28 @@
+<button md-mini-fab class="md-c-fab" (click)="sidenav.toggle()">
+            <md-icon>add</md-icon>
+          </button>
+          <div class="example-scrolling-content">
+            <md-list>
+              <h3 md-subheader>Navs</h3>
+              <md-list-item class="active">
+                <md-icon md-list-icon>dashboard</md-icon>
+                <h4 md-line>DashBoard</h4>
+                <p md-line> Updated 21 mins ago </p>
+              </md-list-item>
+
+              <md-list-item>
+                <md-icon md-list-icon>description</md-icon>
+                <h4 md-line>Applications</h4>
+                <p md-line> 21 applications </p>
+              </md-list-item>
+
+
+              <md-divider></md-divider>
+              <h3 md-subheader>Others</h3>
+              <md-list-item *ngFor="let note of notes">
+                <md-icon md-list-icon>note</md-icon>
+                <h4 md-line>{{note.name}}</h4>
+                <p md-line> {{note.updated | date}} </p>
+              </md-list-item>
+            </md-list>
+ </div>

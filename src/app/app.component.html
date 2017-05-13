@@ -1,22 +1,26 @@
-<md-card class="example-card">
-  <md-card-header>
-    <div md-card-avatar class="example-header-image"></div>
-    <md-card-title>Shiba Inu</md-card-title>
-    <md-card-subtitle>Dog Breed</md-card-subtitle>
-  </md-card-header>
-  <img md-card-image src="assets/img/examples/shiba2.jpg">
-  <md-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </md-card-content>
-  <md-card-actions>
-    <button md-raised-button>LIKE</button>
-    <button md-button>SHARE</button>
-  </md-card-actions>
-</md-card>
+<div class="application">
+
+    <app-header [navRef]="sidenav" class="app-header"></app-header> <!-- header -->
+
+
+
+    <md-sidenav-container class="sidenav-container app-container">  <!-- container grp -->
+        <md-sidenav #sidenav mode="side" opened="true">  <!-- side-nav -->
+           <app-sidenav></app-sidenav>
+        </md-sidenav>
+  
+        <div class="app-content">   <!-- app-container ( main content goes here ) -->
+          <router-outlet></router-outlet>  <!-- views changed by ng2-router -->
+        </div>
+    </md-sidenav-container>
+
+
+
+    <button md-mini-fab class="md-c-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
+
+</div>
 
 
 
@@ -24,43 +28,4 @@
 
 
 
-
-
-
-
-<form class="example-form">
-  <md-input-container class="example-full-width">
-    <input mdInput placeholder="Company (disabled)" disabled value="Google">
-  </md-input-container>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="First name">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="Long Last Name That Will Be Truncated">
-    </md-input-container></td>
-  </tr></table>
-
-  <p>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-    </md-input-container>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address 2"></textarea>
-    </md-input-container>
-  </p>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="City">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="State">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
-    </md-input-container></td>
-  </tr></table>
-</form>
+  
