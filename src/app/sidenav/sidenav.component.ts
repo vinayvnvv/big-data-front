@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RootScope } from './../shared/root.scope';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+
+   constructor(
+        private rootScope: RootScope
+     ) {}
 
 	folders = [
     {
@@ -32,11 +37,6 @@ export class SidenavComponent implements OnInit {
     }
   ];
 
-
-
-
-
-  constructor() { }
 
   ngOnInit() {
   }

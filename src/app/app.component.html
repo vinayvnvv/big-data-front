@@ -1,18 +1,18 @@
 <div class="application">
 
-    <app-header [navRef]="sidenav" class="app-header"></app-header> <!-- header -->
+    <app-header class="app-header"></app-header> <!-- header -->
 
 
 
-    <md-sidenav-container class="sidenav-container app-container">  <!-- container grp -->
-        <md-sidenav #sidenav mode="side" opened="true">  <!-- side-nav -->
-           <app-sidenav></app-sidenav>
-        </md-sidenav>
+    <div class="app-container">  <!-- container grp -->
+        <div class="sidenav" [style.margin-left]="rootScope.navigation.marginStaus">
+          <app-sidenav></app-sidenav>
+        </div>
   
         <div class="app-content">   <!-- app-container ( main content goes here ) -->
           <router-outlet></router-outlet>  <!-- views changed by ng2-router -->
         </div>
-    </md-sidenav-container>
+    </div>
 
 
 

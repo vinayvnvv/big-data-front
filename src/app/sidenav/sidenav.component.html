@@ -2,7 +2,7 @@
             <md-icon>add</md-icon>
           </button>
           <div class="example-scrolling-content">
-            <md-list>
+            <md-list [class.nav-with-ico]="rootScope.navigation.status == 1">
               <h3 md-subheader>Navs</h3>
               <md-list-item class="active">
                 <md-icon md-list-icon>dashboard</md-icon>

@@ -4,7 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
+
+//3rd party library
 import { LayoutModule } from 'ng2-flex-layout';
+import { RippleDirective } from 'ng2-ripple-directive';
 
 import { RouteModule, routingComponents } from './app.routes';
 
@@ -12,6 +15,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+//services
+import { RootScope } from './shared/root.scope';
 
 
 @NgModule({
@@ -31,7 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RouteModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [ RootScope],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
