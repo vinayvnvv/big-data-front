@@ -1,27 +1,6 @@
-<div class="application">
 
-    <app-header class="app-header"></app-header> <!-- header -->
-
-
-
-    <div class="app-container">  <!-- container grp -->
-        <div class="sidenav" [style.margin-left]="rootScope.navigation.marginStaus">
-          <app-sidenav></app-sidenav>
-        </div>
-  
-        <div class="app-content">   <!-- app-container ( main content goes here ) -->
-          <router-outlet></router-outlet>  <!-- views changed by ng2-router -->
-        </div>
-    </div>
-
-
-
-    <button md-mini-fab class="md-c-fab" (click)="sidenav.toggle()">
-      <md-icon>add</md-icon>
-    </button>
-
-</div>
-
+      
+ <router-outlet></router-outlet>  <!-- views changed by ng2-router -->
 
 
 

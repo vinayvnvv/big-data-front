@@ -22,7 +22,9 @@
         "styles.css",
         "theme.scss",
         "../node_modules/ng2-flex-layout/dist/ng2-flex-layout.css",
-        "./assets/md-custom.css"
+        "./assets/css/md-custom.css",
+        "./assets/css/typography.css",
+        "./assets/css/animate.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

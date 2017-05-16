@@ -1,0 +1,112 @@
+.login {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	flex-direction: column;
+	z-index: 2;
+}
+
+.login .header {
+   z-index: 3;
+}
+
+.login .content {
+	flex-grow: 1;
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow-y: auto;
+}
+.background {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+	height: 100%;
+	width: 100%;
+}
+
+.login-card {
+	margin-top: 21px;
+	margin-bottom: 21px;
+	min-height: 400px;	
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	background-color: #fff;
+	display: flex;
+	padding: 19px;
+	flex-direction: column;
+	height: auto;
+    max-width: 400px;
+}
+.login-card .title {
+	margin: 21px 6%;
+}
+
+.login-card .avtar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.login-card .avtar i {
+	color: #999;
+	font-size: 59px;
+}
+
+.login-card .form {
+	margin: 21px 6%;
+	text-align: center;
+}
+.login-card .form md-input-container {
+	width: 100%;
+	margin: 11px 0;
+}
+
+.login-card .form .form-sub {
+	margin: 19px 0;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+}
+
+.login-card .form .footer {
+	position: relative;
+	bottom: 0;
+}
+
+
+.login-card.reset {
+	height: 400px;
+}
+.login-card.reset .actions {
+	text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .login-card {
+		width:90%;
+	}
+}
+
+@media only screen and (min-width: 601px)  and ( max-width: 960px) {
+    .login-card {
+		width:60%;
+	}
+}
+
+@media only screen and (min-width: 961px) and ( max-width: 1280px ) {
+    .login-card {
+		width:45%;
+	}
+}
+@media only screen and (min-width: 1281px) {
+    .login-card {
+		width:30%;
+	}
+}

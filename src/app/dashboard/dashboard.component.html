@@ -1,7 +1,31 @@
-<div class="dashboard">
-<md-toolbar color="primary">DashBoard</md-toolbar>
-<p *ngFor="let item of [0,1,2,3,4,5,6,7,8,9]">
-  dashboard works!<br/><br/><br/><br/>
-</p>
+<div class="application">
+
+    <app-header class="app-header"></app-header> <!-- header -->
+
+
+
+    <div class="app-container">  <!-- container grp -->
+        <div class="sidenav" [style.margin-left]="rootScope.navigation.marginStaus">
+          <app-sidenav></app-sidenav>
+        </div>
+  
+        <div class="app-content">   <!-- app-container ( main content goes here ) -->
+          <router-outlet></router-outlet>  <!-- views changed by ng2-router -->
+        </div>
+    </div>
+
+
+
+    <button md-mini-fab class="md-c-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
 
 </div>
+
+
+
+
+
+
+
+  

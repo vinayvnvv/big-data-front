@@ -7,7 +7,6 @@ import { MaterialModule } from '@angular/material';
 
 //3rd party library
 import { LayoutModule } from 'ng2-flex-layout';
-import { RippleDirective } from 'ng2-ripple-directive';
 
 import { RouteModule, routingComponents } from './app.routes';
 
@@ -18,15 +17,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 //services
 import { RootScope } from './shared/root.scope';
+import { LoginComponent } from './login/login.component';
 
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     HeaderComponent,
     SidenavComponent,
     DashboardComponent,
-    routingComponents
+    routingComponents,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
